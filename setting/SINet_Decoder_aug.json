@@ -1,0 +1,34 @@
+{
+    "train_config": {
+        "Model": "Dnc_SINet",
+        "num_classes" : 2,
+        "p" : 2,
+        "q" : 5,
+        "chnn" : 1,
+        "epochs": 500,
+        "batch" : 32,
+        "loss" : "Lovasz",
+
+        "save_dir": "/others/hxlogs/",
+        "optim" : "Adam",
+        "learning_rate" : 1.5e-3,
+        "weight_step" : 130000,
+        "weight_decay" : 0.96
+    },
+    "data_config": {
+        "cash" : "./pickle_file/portrait.p",
+        "dataset_name": "CVportrait",
+        "data_dir": "/media/donghao/Elements SE/dhh/68800dataset/",
+        "classes" : 2,
+        "ignore_idx" : 255,
+        "num_work" : 4,
+
+        "Enc" :true,
+        "w" :512,
+        "h" :256,
+        "scaleIn" : 8,
+        "batch_size": 36,
+        "Edge" :true,
+        "Aug_dataset" : false
+    }
+}

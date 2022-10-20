@@ -1,0 +1,34 @@
+{
+    "train_config": {
+        "Model": "Dnc_SINet",
+        "num_classes" : 2,
+        "p" : 1,
+        "q" : 1,
+        "chnn" : 1,
+        "epochs": 500,
+        "batch" : 128,
+        "loss" : "Lovasz",
+
+        "save_dir": "/media/zjj/Elements/logs/",
+        "optim" : "Adam",
+        "learning_rate" :3.5e-2,
+        "weight_step" : 150000,
+        "weight_decay" : 0.96
+    },
+    "data_config": {
+        "cash" : "/media/zjj/Elements/pickle_file/portrait.p",
+        "dataset_name": "CVportrait",
+        "data_dir": "/media/zjj/Elements/AddData/",
+        "classes" : 2,
+        "ignore_idx" : 255,
+        "num_work" : 4,
+
+        "Enc" :true,
+        "w" :256,
+        "h" :128,
+        "scaleIn" : 1,
+        "batch_size":128 ,
+        "Edge" :true,
+        "Aug_dataset" : false
+    }
+}

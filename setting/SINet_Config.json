@@ -1,0 +1,39 @@
+{
+    "model_config": {
+        "Model": "SINet",
+        "num_classes" : 2,
+        "p" : 2,
+        "q" : 5,
+        "chnn" : 1
+    },
+
+    "train_config": {
+        "epochs": 500,
+        "loss" : "Lovasz",
+        "save_dir": "../logs/",
+        "optim" : "Adam",
+        "learning_rate" : 4.5e-2,
+        "weight_step" : 150000,
+        "weight_decay" : 0.96
+    },
+
+    "data_config": {
+        "dataset_name": "CVportrait",
+        "data_file" : "./images/multi0401/portrait.p",
+        "data_dir": "./images/multi0401",
+
+        "classes" : 2,
+        "ignore_idx" : 255,
+
+        "num_work" : 4,
+        "batch_size": 1,
+
+        "w" :512,
+        "h" :256,
+        "scaleIn" : 8,
+
+        "Enc" :true,
+        "Edge" :true,
+        "Aug_dataset" : false
+    }
+}

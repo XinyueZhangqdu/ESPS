@@ -1,0 +1,37 @@
+{
+    "train_config": {
+        "resume": "./result/Dnc_SINet11-23_1940/model_301.pth",
+        "Model": "Enc_SINet",
+        "learning_rate": 0.0005,
+        "num_classes" : 2,
+        "p" : 2,
+        "q" : 8,
+        "chnn" : 1,
+        "epochs": 300,
+        "batch" : 8,
+        "loss" : "Lovasz",
+
+        "save_dir": "./logs/",
+        "optim" : "Adam",
+        "lrsch" : "multistep",
+        "wd_tfmode" : true,
+        "weight_decay" : 2e-5
+
+    },
+    "data_config": {
+        "cash" : "./pickle_file/portrait.p",
+        "dataset_name": "CVportrait",
+        "data_dir": "/home/donghao/zxy/qdu_wgd_zxy_ImageMatting/dataset/img_data/",
+        "classes" : 2,
+        "ignore_idx" : 255,
+        "num_work" : 4,
+
+        "Enc" :true,
+        "w" :1024,
+        "h" :512,
+        "scaleIn" : 8,
+        "batch_size": 36,
+        "Edge" :true,
+        "Aug_dataset" : false
+    }
+}
